@@ -1,0 +1,7 @@
+File from: [E:\ThaoHuynh\Documents_Studying\Docs_CyberSoft\Docs-IT-Backend Node Js\NodeJS\Capstone\capstone_node_pinterest4\capstone_node_pinterest/public/img1703648033694_hi.jpg]
+
+File to: [E:\ThaoHuynh\Documents_Studying\Docs_CyberSoft\Docs-IT-Backend Node Js\NodeJS\Capstone\capstone_node_pinterest4\capstone_node_pinterest/public/img/avatar/img1703648033694_hi.jpg]
+
+Compression algorithm: [-]
+
+Description: File does not exist!

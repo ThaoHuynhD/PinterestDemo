@@ -1,0 +1,7 @@
+File from: [E:\ThaoHuynh\Documents_Studying\Docs_CyberSoft\Docs-IT-Backend Node Js\NodeJS\Capstone\capstone_node_pinterest4\capstone_node_pinterest/public/img/1703647815332_hi.jpg]
+
+File to: [E:\ThaoHuynh\Documents_Studying\Docs_CyberSoft\Docs-IT-Backend Node Js\NodeJS\Capstone\capstone_node_pinterest4\capstone_node_pinterest/public/img/avatar/1703647815332_hi.jpg]
+
+Compression algorithm: [mozjpeg]
+
+Description: Error: spawn E:\ThaoHuynh\Documents_Studying\Docs_CyberSoft\Docs-IT-Backend Node Js\NodeJS\Capstone\capstone_node_pinterest4\capstone_node_pinterest\node_modules\mozjpeg\vendor\cjpeg.exe ENOENT
