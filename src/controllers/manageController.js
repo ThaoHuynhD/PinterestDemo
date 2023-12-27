@@ -79,6 +79,34 @@ export const getListImgCreated = async (req, res) => {
 export const deleteImgCreated = async (req, res) => {
   try {
     let { hinh_id } = req.body;
+
+    const isBinhLuanExisted = Boolean(await prisma.binh_luan.findFirst({
+      where: {
+        hinh_id,
+      },
+    }))
+    if (isBinhLuanExisted) {
+      await prisma.binh_luan.deleteMany({
+        where: {
+          hinh_id,
+        },
+      });
+    }
+
+    const isLuuAnhExisted = Boolean(await prisma.luu_anh.findFirst({
+      where: {
+        hinh_id,
+      },
+    }))
+    if (isLuuAnhExisted) {
+      await prisma.luu_anh.deleteMany({
+        where: {
+          hinh_id,
+        },
+      });
+    }
+
+
     const data = await prisma.hinh_anh.findFirst({
       where: {
         hinh_id,

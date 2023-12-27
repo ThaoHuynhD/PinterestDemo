@@ -7,8 +7,8 @@ export const getAllImg = async (req, res) => {
   try {
     let data = await prisma.hinh_anh.findMany();
 
-    if (data.length === 0) { respsonseData(res, "No data", "", 404); }
-    else { respsonseData(res, "Successfully handled", dataSearch, 200); }
+    if (!data) { respsonseData(res, "No data", "", 404); }
+    else { respsonseData(res, "Successfully handled", data, 200); }
   } catch {
     respsonseData(res, "Unexpected Error", "", 500);
   }
@@ -25,7 +25,7 @@ export const searchImgByName = async (req, res) => {
         },
       },
     });
-    
+
     if (dataSearch.length === 0) { respsonseData(res, "No data match your search", "", 404); }
     else { respsonseData(res, "Successfully handled", dataSearch, 200); }
 
