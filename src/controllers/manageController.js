@@ -47,7 +47,10 @@ export const getListImgSaved = async (req, res) => {
         hinh_anh: true,
       },
     });
-    respsonseData(res, "Successfully handled", data, 200);
+
+    if (data.length === 0) { respsonseData(res, "No data", data, 404); }
+    else { respsonseData(res, "Successfully handled", data, 200); }
+
   } catch {
     respsonseData(res, "Unexpected Error", "", 500);
   }
@@ -65,7 +68,9 @@ export const getListImgCreated = async (req, res) => {
       },
     });
 
-    respsonseData(res, "Successfully handled", data, 200);
+    if (data.length === 0) { respsonseData(res, "No data", data, 404); }
+    else { respsonseData(res, "Successfully handled", data, 200); }
+
   } catch {
     respsonseData(res, "Unexpected Error", "", 500);
   }

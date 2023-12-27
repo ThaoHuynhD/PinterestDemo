@@ -1,0 +1,494 @@
+{
+	"info": {
+		"_postman_id": "5ff47af3-ad0c-4226-b3ff-213766a99e75",
+		"name": "pinterest_capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31034333"
+	},
+	"item": [
+		{
+			"name": "Trang đăng ký , đăng nhập",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"email\": \"user7@example.com\",\r\n        \"mat_khau\": \"safe_pass_789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/auth/login",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test2fd@gmail.com\",\r\n    \"mat_khau\" : \"1234\",\r\n    \"ho_ten\": \"Grace\",\r\n    \"tuoi\": 25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/auth/signup",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoyNywia2V5IjoxNzAzNTgwNDYwOTAxLCJpYXQiOjE3MDM1ODA0NjAsImV4cCI6MTcwMzU4MTA2MH0.tmWXgEVMVPZf7pobiRb2jtuja1x95-D5_RSQ1ZhD9o8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/auth/token-ref",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"auth",
+								"token-ref"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trang chủ",
+			"item": [
+				{
+					"name": "Get List Img",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/get-all-img",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"get-all-img"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search img",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoyNCwiaWF0IjoxNzAyNTM5NTg3LCJleHAiOjE3MDI1Mzk4ODd9.oqNBkJWxAQSFjtzuabWROYRaLm75iQN6Bir66UY2Oso",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/search-img/cat",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"search-img",
+								"cat"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trang quản lý",
+			"item": [
+				{
+					"name": "Get-info-user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxMiwia2V5IjoxNzAzNjU0MTg1NTI2LCJpYXQiOjE3MDM2NTQxODUsImV4cCI6MTcwMzY1NDc4NX0.dKe4KJzVu6opTRnFHpZfucTB5bH1Rcy7hMEoR5IQXFw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/manage/get-info-user",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"manage",
+								"get-info-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-ListImg-saved",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjo0LCJrZXkiOjE3MDM2NTQ3ODA2NzcsImlhdCI6MTcwMzY1NDc4MCwiZXhwIjoxNzAzNjU1MzgwfQ.jtHWBhQTnbphogy059PAJn2j7HpWQv8HgtCDRYO9JyE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/manage/listImg-saved",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"manage",
+								"listImg-saved"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-ListImg-Created",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjo0LCJrZXkiOjE3MDM2NTQ3ODA2NzcsImlhdCI6MTcwMzY1NDc4MCwiZXhwIjoxNzAzNjU1MzgwfQ.jtHWBhQTnbphogy059PAJn2j7HpWQv8HgtCDRYO9JyE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/manage/listImg-created",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"manage",
+								"listImg-created"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-Img-Created",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoyNywia2V5IjoxNzAzNjQ4NzI2NTM5LCJpYXQiOjE3MDM2NDg3MjYsImV4cCI6MTcwMzY0OTMyNn0.l3eGLsc6Sx5j0H03hf_XsWD8BsjxKT1TbGg50RCwbkQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hinh_id\" : 58\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/manage/delete-img-created",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"manage",
+								"delete-img-created"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trang chi tiết hình ảnh",
+			"item": [
+				{
+					"name": "Get Img Detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/detail/get-img-detail/8",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"detail",
+								"get-img-detail",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Img Comment",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjo3LCJrZXkiOjE3MDM2NjMyMTkyMTEsImlhdCI6MTcwMzY2MzIxOSwiZXhwIjoxNzAzNjYzODE5fQ.Iv5NfwZbkkNK9GC7IDf7pMuaGjR_8aWjlwN5zDB8pYA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/detail/get-img-comment/7",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"detail",
+								"get-img-comment",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Is Img Saved",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxLCJrZXkiOjE3MDM2NTQ4MzkwMTgsImlhdCI6MTcwMzY1NDgzOSwiZXhwIjoxNzAzNjU1NDM5fQ.kDhofmDZ9tBXUwnL1pQb7V8emH8smJdr_D19XI5v9ZE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/detail/get-img-is-saved/3",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"detail",
+								"get-img-is-saved",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjo3LCJrZXkiOjE3MDM2NjMyMTkyMTEsImlhdCI6MTcwMzY2MzIxOSwiZXhwIjoxNzAzNjYzODE5fQ.Iv5NfwZbkkNK9GC7IDf7pMuaGjR_8aWjlwN5zDB8pYA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "noi_dung",
+									"value": "The colors are so vibrant—love it!",
+									"type": "text"
+								},
+								{
+									"key": "anh_dinh_kem",
+									"type": "file",
+									"src": "/C:/Users/Admin/Desktop/livingroom.jpg"
+								},
+								{
+									"key": "hinh_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/detail/add-comment",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"detail",
+								"add-comment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trang thêm ảnh",
+			"item": [
+				{
+					"name": "Upload Img",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxMiwia2V5IjoxNzAzNjU0MTg1NTI2LCJpYXQiOjE3MDM2NTQxODUsImV4cCI6MTcwMzY1NDc4NX0.dKe4KJzVu6opTRnFHpZfucTB5bH1Rcy7hMEoR5IQXFw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ten_hinh",
+									"value": "Drinking Neet",
+									"type": "text"
+								},
+								{
+									"key": "mo_ta",
+									"value": "Drinking refers to the act of consuming beverages, typically referring to the ingestion of liquids, often including social or recreational aspects, such as drinking water, tea, coffee, or alcoholic beverages.",
+									"type": "text"
+								},
+								{
+									"key": "duong_dan",
+									"type": "file",
+									"src": "/C:/Users/Admin/Desktop/drinkingcat.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/addImg/upload-img",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"addImg",
+								"upload-img"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trang cập nhật thông tin",
+			"item": [
+				{
+					"name": "Update User Info",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxMywia2V5IjoxNzAzNjU1NzEyNzU2LCJpYXQiOjE3MDM2NTU3MTIsImV4cCI6MTcwMzY1NjMxMn0.b5VnBtRB4ddZJ3WfVl7iCJ1bgZGMsrrYOI5fc0Ic27M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "mat_khau",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "anh_dai_dien",
+									"type": "file",
+									"src": "/C:/Users/Admin/Desktop/oldage.jpg"
+								},
+								{
+									"key": "tuoi",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ho_ten",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/personal/update-user-info",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"personal",
+								"update-user-info"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:8080"
+		}
+	]
+}

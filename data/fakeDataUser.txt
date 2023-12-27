@@ -1,0 +1,80 @@
+[
+    {
+        "email": "user1@example.com",
+        "mat_khau": "password123",
+        "ho_ten": "John Doe",
+        "tuoi": 30
+    },
+    {
+        "email": "user2@example.com",
+        "mat_khau": "securepass456",
+        "ho_ten": "Jane Smith",
+        "tuoi": 28
+    },
+    {
+        "email": "user3@example.com",
+        "mat_khau": "letmein789",
+        "ho_ten": "Alex Johnson",
+        "tuoi": 35
+    },
+    {
+        "email": "user4@example.com",
+        "mat_khau": "strongpass987",
+        "ho_ten": "Emily White",
+        "tuoi": 22
+    },
+    {
+        "email": "user5@example.com",
+        "mat_khau": "p@ssw0rd",
+        "ho_ten": "Michael Brown",
+        "tuoi": 32
+    },
+    {
+        "email": "user6@example.com",
+        "mat_khau": "secret123",
+        "ho_ten": "Sophia Lee",
+        "tuoi": 27
+    },
+    {
+        "email": "user7@example.com",
+        "mat_khau": "safe_pass_789",
+        "ho_ten": "William Davis",
+        "tuoi": 31
+    },
+    {
+        "email": "user8@example.com",
+        "mat_khau": "newpass2022",
+        "ho_ten": "Olivia Johnson",
+        "tuoi": 29
+    },
+    {
+        "email": "user9@example.com",
+        "mat_khau": "access456",
+        "ho_ten": "Daniel Smith",
+        "tuoi": 26
+    },
+    {
+        "email": "user10@example.com",
+        "mat_khau": "secure123",
+        "ho_ten": "Emma Wilson",
+        "tuoi": 34
+    },
+    {
+        "email": "user11@example.com",
+        "mat_khau": "passw0rd789",
+        "ho_ten": "Liam Harris",
+        "tuoi": 23
+    },
+    {
+        "email": "user12@example.com",
+        "mat_khau": "strongpassword",
+        "ho_ten": "Noah Jones",
+        "tuoi": 28
+    },
+    {
+        "email": "user13@example.com",
+        "mat_khau": "strongpassword",
+        "ho_ten": "Noah Jones",
+        "tuoi": 28
+    },
+]
